@@ -69,6 +69,34 @@ const streetLightsGallery = [
 
 const roWaterPlantGallery = [`${galleryBase}/RO water Plant.png`] as const;
 
+/** Full-bleed hero backgrounds — electrical / solar / infrastructure */
+export const heroSlideshow = [
+  {
+    src: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2400&q=80",
+    alt: "High-voltage power lines at sunrise",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2400&q=80",
+    alt: "Solar panels powering clean energy",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=2400&q=80",
+    alt: "Large-scale solar farm installation",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1513828583688-c526ac7aafd2?auto=format&fit=crop&w=2400&q=80",
+    alt: "City street lighting at dusk",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=2400&q=80",
+    alt: "Electrical infrastructure and engineering work",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2400&q=80",
+    alt: "Renewable energy landscape",
+  },
+] as const;
+
 export const images = {
   logo: "/images/SEPL logo.png",
   director: "/images/Director - Sagar Girase.jpeg",

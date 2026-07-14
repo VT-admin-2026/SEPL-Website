@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ArrowRight, ChevronDown, Calendar, MapPin, Users } from "lucide-react";
 import RippleButton from "@/components/ui/RippleButton";
 import Counter from "@/components/ui/Counter";
 import { heroStats } from "@/lib/data";
-import { images } from "@/lib/images";
+import { heroSlideshow } from "@/lib/images";
 
 const statIcons = [Calendar, MapPin, Users];
+const SLIDE_MS = 5000;
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -30,6 +32,13 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setActive((prev) => (prev + 1) % heroSlideshow.length);
+    }, SLIDE_MS);
+    return () => window.clearInterval(id);
+  }, []);
+
   return (
     <section
       ref={heroRef}
@@ -37,27 +46,26 @@ export default function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
-        <Image
-          src={images.hero}
-          alt="SEPL solar and electrical infrastructure project"
-          fill
-          priority
-          className="hero-bg-image object-cover"
-          sizes="100vw"
-        />
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-overlay"
-          poster={images.hero}
-        >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-power-lines-in-a-forest-4265-large.mp4"
-            type="video/mp4"
-          />
-        </video>
+        {heroSlideshow.map((slide, index) => (
+          <div
+            key={slide.src}
+            className={`absolute inset-0 transition-opacity duration-[1400ms] ease-in-out ${
+              index === active ? "opacity-100" : "opacity-0"
+            }`}
+            aria-hidden={index !== active}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={index === 0}
+              className={`object-cover transition-transform duration-[5000ms] ease-out ${
+                index === active ? "scale-105" : "scale-100"
+              }`}
+              sizes="100vw"
+            />
+          </div>
+        ))}
         <div className="hero-overlay absolute inset-0" />
         <div className="grid-pattern absolute inset-0 opacity-40" />
       </div>
@@ -112,6 +120,20 @@ export default function Hero() {
               </div>
             );
           })}
+        </div>
+
+        <div className="hero-line mt-8 flex items-center gap-2">
+          {heroSlideshow.map((slide, index) => (
+            <button
+              key={slide.src}
+              type="button"
+              aria-label={`Show slide ${index + 1}`}
+              onClick={() => setActive(index)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${
+                index === active ? "w-8 bg-accent" : "w-1.5 bg-white/35 hover:bg-white/55"
+              }`}
+            />
+          ))}
         </div>
       </div>
 
