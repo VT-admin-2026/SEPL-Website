@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Building2, MapPin, FileText, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import LocalImage from "@/components/ui/LocalImage";
 import { ongoingProjects } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -50,15 +51,25 @@ export default function OngoingProjects() {
               className="ongoing-card group overflow-hidden rounded-3xl border border-primary/10 bg-white shadow-lg transition-shadow hover:shadow-xl"
             >
               <div className="grid lg:grid-cols-3">
-                <div className="bg-gradient-to-br from-primary to-secondary p-8 text-white lg:col-span-1">
-                  <span className="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">
-                    Active · {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="mt-4 font-heading text-xl font-bold">{project.title}</h3>
-                  <p className="mt-2 flex items-center gap-2 text-sm text-white/70">
-                    <MapPin className="h-4 w-4" />
-                    {project.location}
-                  </p>
+                <div className="relative min-h-[220px] overflow-hidden lg:col-span-1 lg:min-h-full">
+                  <LocalImage
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-secondary/75 to-dark/80" />
+                  <div className="relative z-10 flex h-full flex-col justify-end p-8 text-white">
+                    <span className="inline-block w-fit rounded-full bg-white/20 px-3 py-1 text-xs font-semibold">
+                      Active · {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="mt-4 font-heading text-xl font-bold">{project.title}</h3>
+                    <p className="mt-2 flex items-center gap-2 text-sm text-white/70">
+                      <MapPin className="h-4 w-4 shrink-0" />
+                      {project.location}
+                    </p>
+                  </div>
                 </div>
                 <div className="p-8 lg:col-span-2">
                   <p className="leading-relaxed text-dark/65">{project.description}</p>

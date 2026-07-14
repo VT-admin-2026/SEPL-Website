@@ -84,7 +84,7 @@ export const heroSlideshow = [
     alt: "Large-scale solar farm installation",
   },
   {
-    src: "https://images.unsplash.com/photo-1513828583688-c526ac7aafd2?auto=format&fit=crop&w=2400&q=80",
+    src: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=2400&q=80",
     alt: "City street lighting at dusk",
   },
   {
@@ -104,9 +104,21 @@ export const images = {
   about: solarInstallationsGallery[0],
   projects: {
     ruralElectrification: "/images/projects/Saubhagya Scheme.jpg",
+    dtcElectrification:
+      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80",
+    grampanchayat:
+      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1600&q=80",
+    privateSector:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80",
     solarLighting: streetLightsGallery[1],
     railway: "/images/projects/Indian Railways.png",
     smartVillage: "/images/projects/PWD.jpg",
+  },
+  ongoing: {
+    feederImprovement:
+      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1600&q=80",
+    villageElectrification:
+      "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
   },
   associations: {
     pwd: "/images/projects/PWD.jpg",

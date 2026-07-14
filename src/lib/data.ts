@@ -172,6 +172,7 @@ export const completedProjects = [
     description:
       "Partial turnkey contract for providing and fixing material for new single phase residential connections in Shirpur I and Shirpur II subdivision under Dondaicha division. Executed 4,843 service connections benefiting rural households in Sayagaon, Kannad and surrounding areas.",
     image: images.projects.ruralElectrification,
+    imageContain: true,
     category: "MSEDCL · Saubhagya",
     client: "MSEDCL",
     completion: "Completed",
@@ -185,7 +186,7 @@ export const completedProjects = [
     title: "Saubhagya — DTC & 11 KV Line Electrification",
     description:
       "Turnkey electrification for supply, test, transport, construction, erection, testing and commissioning of 11 KV lines on RSJ poles, 11KV AB switch, LT lines, 100 KVA DTC and service connections in Soyagaon and Fardapur sections under Kannad division, Aurangabad.",
-    image: images.projects.solarLighting,
+    image: images.projects.dtcElectrification,
     category: "MSEDCL · Turnkey",
     client: "MSEDCL",
     completion: "Completed",
@@ -199,7 +200,7 @@ export const completedProjects = [
     title: "Grampanchayat Electrification — PWD",
     description:
       "Electrification of Grampanchayat across 150+ villages covering solar street lights, LED street lights, high masts and Anganwadi digitalization. Districts: Dhule, Jalgaon, Nashik and Nandurbar.",
-    image: images.projects.railway,
+    image: images.projects.grampanchayat,
     category: "PWD · Rural",
     client: "PWD Maharashtra",
     completion: "Ongoing",
@@ -213,7 +214,7 @@ export const completedProjects = [
     title: "Private Sector — Reliance Jio & Commercial",
     description:
       "Successfully executed turnkey electrical projects in collaboration with Reliance Jio and various commercial enterprises, spanning comprehensive electrical installations to intricate network designs.",
-    image: images.projects.smartVillage,
+    image: images.projects.privateSector,
     category: "Private Sector",
     client: "Reliance Jio & Others",
     completion: "Completed",
@@ -230,6 +231,7 @@ export const ongoingProjects = [
     title: "System Improvement — High Loss Feeder Prevention",
     description:
       "Full turnkey contract for system improvement on high loss feeder with LT AB cable lines, conversion of overhead to AB cable etc. under Power House sub-division, Aurangabad Urban-I division under Aurangabad Urban Circle.",
+    image: images.ongoing.feederImprovement,
     client: "MSEDCL",
     location: "Aurangabad Urban Division",
     technology: "LT AB Cable, OH to AB Conversion",
@@ -239,6 +241,7 @@ export const ongoingProjects = [
     title: "Grampanchayat Electrification — Expansion",
     description:
       "Continued PWD work installing solar street lights, LED street lights, high masts and Anganwadi digitalization across Dhule, Jalgaon, Nashik and Nandurbar districts.",
+    image: images.ongoing.villageElectrification,
     client: "PWD Maharashtra",
     location: "150+ Villages",
     technology: "Solar LED, High Mast, Digitalization",
