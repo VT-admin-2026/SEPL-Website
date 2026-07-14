@@ -61,12 +61,12 @@ export default function CompanyDetails() {
                 and MIDC.
               </p>
               <div className="relative mt-6 flex items-center gap-4">
-                <div className="relative h-16 w-16 overflow-hidden rounded-xl border-2 border-white/30">
+                <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border-2 border-white/30 bg-white p-1.5">
                   <LocalImage
-                    src={images.director}
-                    alt="SEPL"
+                    src={images.logo}
+                    alt="Suvidhinath Electronics Pvt. Ltd."
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="64px"
                   />
                 </div>

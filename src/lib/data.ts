@@ -170,13 +170,11 @@ export const completedProjects = [
   {
     title: "Saubhagya Scheme — Residential Connections",
     description:
-      "Partial turnkey contract for providing and fixing material for new single phase residential connections in Shirpur I and Shirpur II subdivision under Dondaicha division. Executed 4,843 service connections worth ₹135.05 Lakhs benefiting rural households in Sayagaon, Kannad and surrounding areas.",
+      "Partial turnkey contract for providing and fixing material for new single phase residential connections in Shirpur I and Shirpur II subdivision under Dondaicha division. Executed 4,843 service connections benefiting rural households in Sayagaon, Kannad and surrounding areas.",
     image: images.projects.ruralElectrification,
     category: "MSEDCL · Saubhagya",
-    value: "₹135.05 L",
     client: "MSEDCL",
     completion: "Completed",
-    technology: "Residential Connections, LT Cables, RSJ Poles",
     stats: [
       { label: "Connections", value: "4,843" },
       { label: "Tenders", value: "17" },
@@ -189,14 +187,12 @@ export const completedProjects = [
       "Turnkey electrification for supply, test, transport, construction, erection, testing and commissioning of 11 KV lines on RSJ poles, 11KV AB switch, LT lines, 100 KVA DTC and service connections in Soyagaon and Fardapur sections under Kannad division, Aurangabad.",
     image: images.projects.solarLighting,
     category: "MSEDCL · Turnkey",
-    value: "₹145.63 L",
     client: "MSEDCL",
     completion: "Completed",
-    technology: "11 KV Lines, DTC, RSJ Poles",
     stats: [
       { label: "Projects", value: "2" },
-      { label: "Soyagaon", value: "₹79.65L" },
-      { label: "Fardapur", value: "₹65.98L" },
+      { label: "Division", value: "Kannad" },
+      { label: "District", value: "Aurangabad" },
     ],
   },
   {
@@ -205,10 +201,8 @@ export const completedProjects = [
       "Electrification of Grampanchayat across 150+ villages covering solar street lights, LED street lights, high masts and Anganwadi digitalization. Districts: Dhule, Jalgaon, Nashik and Nandurbar.",
     image: images.projects.railway,
     category: "PWD · Rural",
-    value: "150+ Villages",
     client: "PWD Maharashtra",
     completion: "Ongoing",
-    technology: "Solar LED, High Mast, Digitalization",
     stats: [
       { label: "Villages", value: "150+" },
       { label: "Districts", value: "4" },
@@ -221,10 +215,8 @@ export const completedProjects = [
       "Successfully executed turnkey electrical projects in collaboration with Reliance Jio and various commercial enterprises, spanning comprehensive electrical installations to intricate network designs.",
     image: images.projects.smartVillage,
     category: "Private Sector",
-    value: "Multiple",
     client: "Reliance Jio & Others",
     completion: "Completed",
-    technology: "Electrical Installations, Network Design",
     stats: [
       { label: "Sectors", value: "Private" },
       { label: "Projects", value: "100+" },
@@ -239,7 +231,6 @@ export const ongoingProjects = [
     description:
       "Full turnkey contract for system improvement on high loss feeder with LT AB cable lines, conversion of overhead to AB cable etc. under Power House sub-division, Aurangabad Urban-I division under Aurangabad Urban Circle.",
     client: "MSEDCL",
-    value: "₹4.21 Cr",
     location: "Aurangabad Urban Division",
     technology: "LT AB Cable, OH to AB Conversion",
     workOrder: "CE/AZ/AUC/HLF/T-29/2018-19/LOA DT 20 JUL 2019",
@@ -249,7 +240,6 @@ export const ongoingProjects = [
     description:
       "Continued PWD work installing solar street lights, LED street lights, high masts and Anganwadi digitalization across Dhule, Jalgaon, Nashik and Nandurbar districts.",
     client: "PWD Maharashtra",
-    value: "Multi-District",
     location: "150+ Villages",
     technology: "Solar LED, High Mast, Digitalization",
     workOrder: "Multiple ongoing contracts",
@@ -326,31 +316,60 @@ export const otherActivitiesContent = {
 };
 
 export const galleryItems = [
-  { title: "Village Development", image: images.gallery.villageDevelopment, height: "h-64" },
-  { title: "Community Toilets", image: images.gallery.toilets, height: "h-48" },
-  { title: "RO Water Plants", image: images.gallery.roPlants, height: "h-72" },
-  { title: "School Electrification", image: images.gallery.schools, height: "h-56" },
+  {
+    title: "Village Development",
+    image: images.gallery.villageDevelopment,
+    images: [...images.gallery.villageDevelopmentGallery],
+    height: "h-64",
+  },
+  {
+    title: "Community Toilets",
+    image: images.gallery.toilets,
+    images: [...images.gallery.toiletsGallery],
+    height: "h-48",
+  },
+  {
+    title: "RO Water Plants",
+    image: images.gallery.roPlants,
+    images: [...images.gallery.roPlantsGallery],
+    height: "h-72",
+  },
+  {
+    title: "School Beautification",
+    image: images.gallery.schools,
+    images: [...images.gallery.schoolsGallery],
+    height: "h-56",
+  },
   {
     title: "Street Lights",
     image: images.gallery.streetLights,
     images: [...images.gallery.streetLightsGallery],
     height: "h-64",
   },
-  { title: "Solar Installations", image: images.gallery.solar, height: "h-52" },
+  {
+    title: "Solar Installations",
+    image: images.gallery.solar,
+    images: [...images.gallery.solarGallery],
+    height: "h-52",
+  },
   {
     title: "Water Projects",
     image: images.gallery.waterProjects,
     images: [...images.gallery.waterProjectsGallery],
     height: "h-60",
   },
-  { title: "Beautification", image: images.gallery.beautification, height: "h-48" },
+  {
+    title: "Beautification",
+    image: images.gallery.beautification,
+    images: [...images.gallery.beautificationGallery],
+    height: "h-48",
+  },
 ];
 
 export const stats = [
   { value: 12, suffix: "+", label: "Years Experience" },
   { value: 150, suffix: "+", label: "Villages Served" },
   { value: 4843, suffix: "+", label: "Service Connections" },
-  { value: 135, suffix: " L+", label: "Saubhagya Project Value" },
 ];
 
 export const turnover = {
@@ -398,9 +417,8 @@ export const navLinks = [
   { label: "Company", href: "#company-details" },
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#projects" },
-  { label: "Ongoing", href: "#ongoing-projects" },
   { label: "Director", href: "#director" },
-  { label: "Activities", href: "#activities" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 

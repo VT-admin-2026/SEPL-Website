@@ -23,23 +23,26 @@ export default function Director() {
 
         <div className="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
           {/* Image - LEFT (40%) */}
-          <AnimatedSection animation="slide-right" className="lg:col-span-2">
+          <AnimatedSection
+            animation="slide-right"
+            className="flex justify-center lg:col-span-2"
+          >
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.4 }}
-              className="group relative"
+              className="group relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none"
             >
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-primary to-accent opacity-20 blur-sm transition-opacity group-hover:opacity-40" />
-              <div className="relative overflow-hidden rounded-3xl border-4 border-primary/30 shadow-2xl shadow-primary/15">
+              <div className="relative mx-auto overflow-hidden rounded-3xl border-4 border-primary/30 shadow-2xl shadow-primary/15">
                 <LocalImage
                   src={director.image}
                   alt={`${director.name} - Managing Director`}
                   width={600}
                   height={750}
-                  className="h-[420px] w-full object-cover object-top transition-transform duration-700 group-hover:scale-105 lg:h-[560px]"
+                  className="mx-auto h-[360px] w-full object-cover object-center transition-transform duration-700 group-hover:scale-105 sm:h-[420px] lg:h-[560px]"
                 />
               </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white shadow-lg">
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-primary px-6 py-2 text-sm font-semibold text-white shadow-lg">
                 Managing Director
               </div>
             </motion.div>

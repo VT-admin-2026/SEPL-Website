@@ -36,11 +36,11 @@ export default function OtherActivities() {
   };
 
   return (
-    <section id="activities" className="section-padding bg-light">
+    <section id="gallery" className="section-padding bg-light">
       <div className="mx-auto max-w-7xl">
         <AnimatedSection animation="fade-up" className="mb-16 text-center">
           <span className="text-sm font-semibold tracking-widest text-accent uppercase">
-            Other Activities
+            Gallery
           </span>
           <h2 className="mt-3 font-heading text-3xl font-bold text-dark md:text-4xl lg:text-5xl">
             Community <span className="text-gradient">Development</span>

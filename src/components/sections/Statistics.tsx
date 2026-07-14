@@ -1,12 +1,12 @@
 "use client";
 
-import { Calendar, MapPin, Users, IndianRupee } from "lucide-react";
+import { Calendar, MapPin, Users } from "lucide-react";
 import Counter from "@/components/ui/Counter";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { stats } from "@/lib/data";
 
-const statIcons = [Calendar, MapPin, Users, IndianRupee];
+const statIcons = [Calendar, MapPin, Users];
 
 export default function Statistics() {
   return (
@@ -26,7 +26,7 @@ export default function Statistics() {
           />
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-6">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6">
           {stats.map((stat, i) => {
             const Icon = statIcons[i];
             return (

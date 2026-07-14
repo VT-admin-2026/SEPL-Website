@@ -5,14 +5,7 @@ import LocalImage from "@/components/ui/LocalImage";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
-import {
-  IndianRupee,
-  Building2,
-  Calendar,
-  Cpu,
-  ArrowRight,
-  MapPin,
-} from "lucide-react";
+import { Building2, Calendar, ArrowRight, MapPin } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { completedProjects } from "@/lib/data";
 
@@ -141,11 +134,6 @@ export default function Projects() {
                     <div className="mt-8 grid grid-cols-2 gap-3">
                       {[
                         {
-                          icon: IndianRupee,
-                          label: "Project Value",
-                          value: project.value,
-                        },
-                        {
                           icon: Building2,
                           label: "Client",
                           value: project.client,
@@ -154,11 +142,6 @@ export default function Projects() {
                           icon: Calendar,
                           label: "Completion",
                           value: project.completion,
-                        },
-                        {
-                          icon: Cpu,
-                          label: "Technology",
-                          value: project.technology,
                         },
                       ].map((item) => (
                         <div

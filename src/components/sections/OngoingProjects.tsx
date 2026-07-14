@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Building2, MapPin, IndianRupee, FileText, ArrowRight } from "lucide-react";
+import { Building2, MapPin, FileText, ArrowRight } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { ongoingProjects } from "@/lib/data";
 
@@ -62,19 +62,12 @@ export default function OngoingProjects() {
                 </div>
                 <div className="p-8 lg:col-span-2">
                   <p className="leading-relaxed text-dark/65">{project.description}</p>
-                  <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                  <div className="mt-6 grid gap-4 sm:grid-cols-2">
                     <div className="flex items-center gap-3 rounded-xl bg-light p-4">
                       <Building2 className="h-5 w-5 text-primary" />
                       <div>
                         <p className="text-[10px] text-dark/40 uppercase">Client</p>
                         <p className="text-sm font-bold text-dark">{project.client}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 rounded-xl bg-light p-4">
-                      <IndianRupee className="h-5 w-5 text-primary" />
-                      <div>
-                        <p className="text-[10px] text-dark/40 uppercase">Value</p>
-                        <p className="text-sm font-bold text-dark">{project.value}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3 rounded-xl bg-light p-4">
