@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
-import { siteConfig } from "@/lib/data";
+import { publicRoutes, toCanonicalUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: siteConfig.url.endsWith("/") ? siteConfig.url : `${siteConfig.url}/`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-  ];
+  const lastModified = new Date();
+
+  return publicRoutes.map((route) => ({
+    url: toCanonicalUrl(route.path),
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }

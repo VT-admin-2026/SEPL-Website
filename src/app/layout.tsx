@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import { siteConfig } from "@/lib/data";
+import { CANONICAL_DOMAIN } from "@/lib/seo";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -19,6 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(CANONICAL_DOMAIN),
   title: {
     default: `${siteConfig.name} | Engineering Tomorrow, Powering Rural India`,
     template: `%s | ${siteConfig.name}`,
