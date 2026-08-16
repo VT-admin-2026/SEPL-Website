@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "Suvidhinath Electronics Pvt. Ltd.",
   description:
     "Established in 2013, SEPL delivers reliable electrical infrastructure, renewable energy solutions, turnkey government projects and rural development across Maharashtra. We Care!",
-  url: "https://seplweb.in",
+  url: "https://www.seplweb.in",
   ogImage: "/images/SEPL logo.png",
   founded: "23rd December 2013",
   contact: {

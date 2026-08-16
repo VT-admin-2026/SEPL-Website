@@ -81,6 +81,9 @@ export default function Hero() {
           </div>
 
           <h1 className="font-heading text-4xl leading-[1.08] font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="sr-only">
+              Suvidhinath Electronics Pvt. Ltd. (SEPL)
+            </span>
             <span className="hero-line block">Engineering Tomorrow,</span>
             <span className="hero-line block bg-gradient-to-r from-accent to-cyan-300 bg-clip-text text-transparent">
               Powering Rural India.
@@ -88,8 +91,8 @@ export default function Hero() {
           </h1>
 
           <p className="hero-line mt-6 max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">
-            Delivering reliable electrical infrastructure, renewable energy solutions,
-            turnkey government projects and innovative engineering since 2013.
+            Delivering reliable electrical infrastructure, power distribution, renewable energy
+            and solar solutions, turnkey government projects and innovative engineering since 2013.
           </p>
 
           <div className="hero-line mt-10 flex flex-wrap gap-4">
