@@ -1,11 +1,10 @@
-import { Linkedin, Facebook, Twitter, Instagram } from "lucide-react";
+import { Linkedin, Facebook, Instagram } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { siteConfig, footerLinks } from "@/lib/data";
 
 const socialIcons = [
   { icon: Linkedin, href: siteConfig.social.linkedin, label: "LinkedIn" },
   { icon: Facebook, href: siteConfig.social.facebook, label: "Facebook" },
-  { icon: Twitter, href: siteConfig.social.twitter, label: "Twitter" },
   { icon: Instagram, href: siteConfig.social.instagram, label: "Instagram" },
 ];
 

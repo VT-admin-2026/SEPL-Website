@@ -18,6 +18,12 @@ const geoCoordinates = {
   longitude: siteConfig.contact.coordinates.lng,
 };
 
+const socialProfiles = [
+  siteConfig.social.facebook,
+  siteConfig.social.instagram,
+  siteConfig.social.linkedin,
+];
+
 const sharedBusinessFields = {
   name: seoMetadata.organizationName,
   alternateName: seoMetadata.alternateName,
@@ -29,6 +35,7 @@ const sharedBusinessFields = {
   foundingDate: foundingDateIso,
   address: postalAddress,
   geo: geoCoordinates,
+  sameAs: socialProfiles,
   identifier: [
     {
       "@type": "PropertyValue" as const,

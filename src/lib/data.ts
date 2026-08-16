@@ -26,10 +26,9 @@ export const siteConfig = {
       "https://maps.google.com/maps?q=21.353007701888295,74.88804169295906&hl=en&z=16&output=embed",
   },
   social: {
-    linkedin: "https://linkedin.com",
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
-    instagram: "https://instagram.com",
+    linkedin: "https://www.linkedin.com/company/suvidhinath-electronics-pvt-ltd/",
+    facebook: "https://www.facebook.com/share/18XPHXeBsA/",
+    instagram: "https://www.instagram.com/sepl.solar/",
   },
 };
 
